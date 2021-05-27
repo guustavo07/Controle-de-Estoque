@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Trab{
     public static void main(String[] args){
         String nome;
-        int options,num=0, estIJ, estIP, estJF, estPF, estJ, estP, transfJP, transfPJ, cont=0, i=1;                         // estoque jatiboca e estoque pontal
+        int options,num=0, estIJ, estIP, estJF, estPF, estJ, estP, estAtualizadoj, estAtualizadop, transfJP, transfPJ, cont=0, i=1;                        
         Scanner ler = new Scanner(System.in);
         
         System.out.println("Entre com o estoque inicial na empresa Jatiboca");
@@ -53,29 +53,6 @@ public class Trab{
                 System.out.println("O estoque em Pontal agora é: " + estPF+"kg");
                 }
             }
-            else if(options == 3)
-            {
-                System.out.println("Qual empresa: \n1-Jatiboca -> Pontal \n2-Pontal -> Jatiboca");
-                options=ler.nextInt();
-                if (option == 1)
-                {
-                 System.out.println("Quantidade de transferência de açúcar de Jatiboca para Pontal: ");
-                 transfJP=ler.nextInt();
-                    if(transfJP > estJF)
-                    {
-                     System.out.println("Impossível transferir de Jatiboca para Pontal, estoque insuficiente!");
-                     System.out.println("Estoque atualizado em Jatiboca: " + estJF+"kg");
-                     System.out.println("Estoque atualizado em Pontal: "+ estPF+"kg");
-                    }
-                    else
-                    {
-                     System.out.println("Transferência realizada!!!");
-                     System.out.println("Estoque atualizado em Jatiboca: "+ estJF-transfJP+"kg");
-                     System.out.println("Estoque atualizado em Pontal: "+ estPF+transfJP+"kg");
-                    }
-                 
-                }
-            }
+        }
     }
-    }   
 }
